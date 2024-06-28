@@ -16,6 +16,45 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+  {
+    path: '/newpage',
+    name: '新頁面',
+    component: () => import('../views/NewPage.vue'),
+    children: [
+      {
+        path: 'a',
+        component: () => import('../views/ComponentA.vue')
+      },
+      {
+        path: 'b',
+        component: () => import('../views/ComponentB.vue')
+      },
+      {
+        path: 'c',
+        component: () => import('../views/ComponentC.vue')
+      },
+      {
+        path: 'namedView',
+        component: () => import('../views/NamedView.vue'),
+        children: [
+          {
+            path: 'c2a',
+            components: {
+              left: () => import('../views/ComponentC.vue'),
+              right: () => import('../views/ComponentA.vue')
+            }
+          },
+          {
+            path: 'a2b',
+            components: {
+              left: () => import('../views/ComponentA.vue'),
+              right: () => import('../views/ComponentB.vue')
+            }
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 const router = createRouter({

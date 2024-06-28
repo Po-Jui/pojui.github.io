@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunknew_project"]=self["webpackChunknew_project"]||[]).push([[977],{977:function(e,n,r){function t(e,n){return"元件 B"}r.r(n),r.d(n,{default:function(){return o}});var u=r(1241);const c={},f=(0,u.A)(c,[["render",t]]);var o=f}}]);
+//# sourceMappingURL=977.cf701442.js.map

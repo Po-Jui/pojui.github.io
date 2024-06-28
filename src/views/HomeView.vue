@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <Form @submit="onSubmit" v-slot="{ errors, values, validate }">
-      {{ errors }} {{ values }}
+      <!-- {{ errors }} {{ values }} -->
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <Field
